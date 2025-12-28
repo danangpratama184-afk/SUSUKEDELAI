@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Susu Kedelai Pak Hadi</title>
+
+  <!-- =========================
+       STYLE CSS
+  ========================= -->
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(180deg, #f6fff8, #e9f5ee);
+      color: #1b4332;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: linear-gradient(90deg, #2d6a4f, #40916c);
+      color: white;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 18px;
+    }
+
+    header button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .logo {
+      background: white;
+      color: #2d6a4f;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    /* SIDEBAR */
+    #sidebar {
+      position: fixed;
+      top: 0;
+      left: -260px;
+      width: 260px;
+      height: 100%;
+      background: #1b4332;
+      color: white;
+      padding: 20px;
+      transition: 0.4s;
+      z-index: 200;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    #sidebar.active {
+      left: 0;
+    }
+
+    #sidebar nav a {
+      display: block;
+      margin: 15px 0;
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    #sidebar nav a:hover {
+      background: #52b788;
+    }
+
+    #closeMenu {
+      align-self: flex-end;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 30px 20px;
+      text-align: center;
+      animation: fadeUp 1s ease;
+    }
+
+    .hero h2 {
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* PRODUK */
+    .produk {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .card {
+      height: 140px;
+      background: white;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    /* AKSI */
+    .aksi {
+      display: flex;
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .aksi button {
+      flex: 1;
+      padding: 12px;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(90deg, #52b788, #2d6a4f);
+      color: white;
+      font-weight: bold;
+    }
+
+    /* CTA */
+    .cta {
+      background: #1b4332;
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+
+    /* FORM */
+    #formOrder {
+      display: none;
+      padding: 20px;
+    }
+
+    #formOrder input {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    #formOrder button {
+      width: 100%;
+      padding: 14px;
+      background: #40916c;
+      color: white;
+      border: none;
+      border-radius: 10px;
+    }
+
+    /* KEUNGGULAN */
+    .keunggulan {
+      padding: 40px 20px;
+      background: #f1f8f5;
+    }
+
+    .keunggulan h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .keunggulan-list {
+      display: grid;
+      gap: 15px;
+    }
+
+    .unggul-item {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    /* DARK MODE */
+    body.dark {
+      background: #020617;
+      color: #e5e7eb;
+    }
+
+    body.dark header {
+      background: #020617;
+    }
+
+    body.dark .card,
+    body.dark .unggul-item {
+      background: #020617;
+      color: #e5e7eb;
+    }
+
+    .dark-toggle {
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #1b4332;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (min-width: 768px) {
+      .produk { grid-template-columns: repeat(3,1fr); }
+      .keunggulan-list { grid-template-columns: repeat(3,1fr); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <aside id="sidebar">
+    <button id="closeMenu">×</button>
+    <nav>
+      <a href="#">About</a>
+      <a href="#">Lokasi</a>
+    </nav>
+    <p>© 2025 Pak Hadi</p>
+  </aside>
+
+  <!-- HEADER -->
+  <header>
+    <button id="openMenu">☰</button>
+    <h1>Susu Kedelai Pak Hadi</h1>
+    <div class="logo">LOGO</div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Susu Kedelai</h2>
+    <p>Susu kedelai Pak Hadi sudah ada sejak 2007 dengan rasa manis dan enak, ramah di kantong dan bikin ketagihan.</p>
+  </section>
+
+  <!-- PRODUK -->
+  <section class="produk">
+    <div class="card">FOTO PRODUK</div>
+    <div class="card">FOTO PRODUK</div>
+  </section>
+
+  <!-- AKSI -->
+  <section class="aksi">
+    <button id="btnLokasi">📍 Lokasi</button>
+    <button id="btnOrder">🛒 Link Order</button>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h3>Ayo buruan order, bisa langsung diantar!</h3>
+  </section>
+
+  <!-- FORM -->
+  <section id="formOrder">
+    <h3>Form Pemesanan</h3>
+    <input id="nama" placeholder="Nama">
+    <input id="alamat" placeholder="Alamat">
+    <input id="jumlah" type="number" placeholder="Jumlah">
+    <button id="kirimWA">Pesan via WhatsApp</button>
+  </section>
+
+  <!-- KEUNGGULAN -->
+  <section class="keunggulan">
+    <h2>Kenapa Pilih Kami?</h2>
+    <div class="keunggulan-list">
+      <div class="unggul-item">🥛 Segar Setiap Hari</div>
+      <div class="unggul-item">💸 Harga Bersahabat</div>
+      <div class="unggul-item">🚚 Bisa Antar</div>
+    </div>
+  </section>
+
+  <!-- DARK MODE -->
+  <div class="dark-toggle">
+    <button id="toggleDark">🌙 Mode Gelap</button>
+  </div>
+
+  <footer>
+    <p>© 2025 Susu Kedelai Pak Hadi</p>
+    <p>Website UMKM & Tugas Sekolah</p>
+  </footer>
+
+  <!-- =========================
+       SCRIPT JS
+  ========================= -->
+  <script>
+    const openMenu = document.getElementById("openMenu");
+    const closeMenu = document.getElementById("closeMenu");
+    const sidebar = document.getElementById("sidebar");
+
+    openMenu.onclick = () => sidebar.classList.add("active");
+    closeMenu.onclick = () => sidebar.classList.remove("active");
+
+    const btnOrder = document.getElementById("btnOrder");
+    const formOrder = document.getElementById("formOrder");
+    btnOrder.onclick = () => formOrder.style.display = "block";
+
+    const btnLokasi = document.getElementById("btnLokasi");
+    btnLokasi.onclick = () => window.open(
+      "https://www.google.com/maps/search/?api=1&query=Susu+Kedelai+Pak+Hadi"
+    );
+
+    const btnWA = document.getElementById("kirimWA");
+    btnWA.onclick = () => {
+      const nama = namaInput.value;
+      const alamat = alamatInput.value;
+      const jumlah = jumlahInput.value;
+    };
+
+    const toggleDark = document.getElementById("toggleDark");
+    toggleDark.onclick = () => {
+      document.body.classList.toggle("dark");
+      toggleDark.innerText =
+        document.body.classList.contains("dark")
+        ? "☀️ Mode Terang"
+        : "🌙 Mode Gelap";
+    };
+
+    const namaInput = document.getElementById("nama");
+    const alamatInput = document.getElementById("alamat");
+    const jumlahInput = document.getElementById("jumlah");
+
+    document.getElementById("kirimWA").onclick = () => {
+      const total = jumlahInput.value * 12000;
+      const pesan = `Halo Pak Hadi,%0ASaya ${namaInput.value}%0AAlamat: ${alamatInput.value}%0AJumlah: ${jumlahInput.value}%0ATotal: Rp ${total}`;
+      window.open(`https://wa.me/6281234567890?text=${pesan}`);
+    };
+  </script>
+
+</body>
+</html>

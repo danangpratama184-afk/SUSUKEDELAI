@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    </head>
+         <title>SUSU KEDELAI PAK HADI</title>
+         <link rel="icon" href="logosule.png">
+    </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Susu Kedelai Pak Hadi - Sejak 2006</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FFC107;
+            --secondary: #4CAF50;
+            --accent: #FF5722;
+            --dark: #333333;
+            --light: #F9F9F9;
+            --text: #555555;
+            --shadow: 0 5px 15px rgba(0,0,0,0.1);
+            --radius: 10px;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-icon {
+            background-color: var(--primary);
+            color: var(--dark);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-right: 10px;
+            font-weight: 700;
+        }
+        
+        .logo-text h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            color: var(--dark);
+            line-height: 1.2;
+        }
+        
+        .logo-text span {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav li {
+            margin-left: 25px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 5px 0;
+            position: relative;
+        }
+        
+        nav a:hover {
+            color: var(--accent);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            left: 0;
+            bottom: 0;
+            transition: var(--transition);
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--dark);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(255,193,7,0.1) 0%, rgba(76,175,80,0.1) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,193,7,0.2) 0%, rgba(255,193,7,0) 70%);
+            top: -150px;
+            right: -150px;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(76,175,80,0.2) 0%, rgba(76,175,80,0) 70%);
+            bottom: -100px;
+            left: -100px;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-text {
+            flex: 1;
+            max-width: 600px;
+        }
+        
+        .hero-text h2 {
+            font-size: 42px;
+            color: var(--dark);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero-text h2 span {
+            color: var(--secondary);
+        }
+        
+        .hero-text .year-badge {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        
+        .hero-text p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        .highlight {
+            background-color: rgba(255,193,7,0.2);
+            padding: 15px;
+            border-radius: var(--radius);
+            border-left: 4px solid var(--primary);
+            margin: 25px 0;
+        }
+        
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transform: perspective(1000px) rotateY(-10deg);
+            transition: var(--transition);
+        }
+        
+        .hero-image img:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+        
+        /* Order Form */
+        .order-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--text);
+        }
+        
+        .order-container {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+        
+        .order-form {
+            flex: 1;
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .order-info {
+            flex: 1;
+            background-color: var(--light);
+            padding: 30px;
+            border-radius: var(--radius);
+            border: 1px solid #eee;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark);
+        }
+        
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: var(--radius);
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            transition: var(--transition);
+        }
+        
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255,193,7,0.2);
+        }
+        
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        
+        .quantity-btn {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            color: var(--dark);
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .quantity-btn:hover {
+            background-color: #e0a800;
+        }
+        
+        .quantity-input {
+            width: 60px;
+            text-align: center;
+            margin: 0 10px;
+            font-weight: 600;
+            font-size: 18px;
+        }
+        
+        .price-display {
+            background-color: var(--secondary);
+            color: white;
+            padding: 15px;
+            border-radius: var(--radius);
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .price-display h3 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        
+        .order-btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 25px;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        .order-btn:hover {
+            background-color: #e64a19;
+            transform: translateY(-3px);
+            box-shadow: 0 7px 15px rgba(255,87,34,0.3);
+        }
+        
+        .order-btn i {
+            margin-right: 10px;
+        }
+        
+        .info-item {
+            display: flex;
+            margin-bottom: 25px;
+            align-items: flex-start;
+        }
+        
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255,193,7,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+            color: var(--dark);
+            font-size: 20px;
+        }
+        
+        /* About Section */
+        .about-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 32px;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+        
+        .about-features {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .feature {
+            background-color: white;
+            padding: 20px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .feature i {
+            font-size: 30px;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        
+        .about-image {
+            flex: 1;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+         /* Location Section Styles */
+    .location-section {
+        padding: 80px 0;
+        background-color: white;
+    }
+    
+    .location-content {
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+    }
+    
+    .location-info {
+        flex: 1;
+        background-color: #f8f9fa;
+        padding: 30px;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+    }
+    
+    .location-info h3 {
+        font-size: 24px;
+        color: var(--dark);
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid var(--primary);
+    }
+    
+    .address-details {
+        margin-top: 20px;
+    }
+    
+    .address-details p {
+        margin-bottom: 15px;
+        line-height: 1.7;
+    }
+    
+    .address-details strong {
+        color: var(--dark);
+    }
+    
+    .contact-info {
+        background-color: rgba(255,193,7,0.1);
+        padding: 20px;
+        border-radius: var(--radius);
+        margin: 25px 0;
+    }
+    
+    .location-buttons {
+        display: flex;
+        gap: 15px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
+    
+    .location-btn {
+        display: inline-flex;
+        align-items: center;
+        padding: 12px 25px;
+        background-color: var(--primary);
+        color: var(--dark);
+        text-decoration: none;
+        border-radius: var(--radius);
+        font-weight: 600;
+        transition: var(--transition);
+        border: 2px solid var(--primary);
+    }
+    
+    .location-btn:hover {
+        background-color: transparent;
+        color: var(--dark);
+    }
+    
+    .location-btn i {
+        margin-right: 10px;
+        font-size: 18px;
+    }
+    
+    .whatsapp-btn {
+        background-color: var(--secondary);
+        color: white;
+        border-color: var(--secondary);
+    }
+    
+    .whatsapp-btn:hover {
+        background-color: transparent;
+        color: var(--secondary);
+    }
+    
+    .location-map {
+        flex: 1;
+    }
+    
+    .map-note {
+        margin-top: 15px;
+        font-size: 14px;
+        color: var(--text);
+        text-align: center;
+    }
+    
+    .map-note i {
+        color: var(--accent);
+        margin-right: 5px;
+    }
+    
+    /* Responsive untuk lokasi */
+    @media (max-width: 992px) {
+        .location-content {
+            flex-direction: column;
+        }
+        
+        .location-info, .location-map {
+            width: 100%;
+        }
+    }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+            color: #aaa;
+            font-size: 14px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-content, .order-container, .about-content {
+                flex-direction: column;
+            }
+            
+            .hero-text, .hero-image, .order-form, .order-info, .about-text, .about-image {
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            .hero-image {
+                justify-content: center;
+                margin-top: 40px;
+            }
+            
+            .hero-text h2 {
+                font-size: 36px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            nav li {
+                margin: 10px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero {
+                padding: 60px 0;
+            }
+            
+            .hero-text h2 {
+                font-size: 30px;
+            }
+            
+            .section-title h2 {
+                font-size: 30px;
+            }
+            
+            .order-section, .about-section {
+                padding: 60px 0;
+            }
+            
+            .footer-column {
+                min-width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-text h2 {
+                font-size: 26px;
+            }
+            
+            .section-title h2 {
+                font-size: 26px;
+            }
+            
+            .order-form, .order-info {
+                padding: 20px;
+            }
+            
+            .feature {
+                padding: 15px;
+            }
+        }
+        
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>SUSU KEDELAI <span>PAK HADI</span></h1>
+                    </div>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav>
+                    <ul id="navMenu">
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#about">Tentang</a></li>
+                        <li><a href="#order">Pesan</a></li>
+                        <li><a href="#location" id="locationLink">Lokasi</a></li>
+                        <li><a href="#contact">Kontak</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content animate-fade-in-up">
+                <div class="hero-text">
+                    <div class="year-badge">Sejak 2006</div>
+                    <h2>Susu Kedelai Segar & Sehat <span>Setiap Hari</span></h2>
+                    <p>Susu Kedelai Pak Hadi sudah hadir dengan cita rasa khas sejak tahun 2006. Dengan rasa yang masih otentik dan bahan-bahan pilihan, kami hadir untuk memberikan asupan nutrisi terbaik untuk keluarga Anda.</p>
+                    
+                    <div class="highlight">
+                        <p><i class="fas fa-check-circle" style="color: var(--secondary); margin-right: 8px;"></i>Tanpa bahan pengawet & perasa buatan</p>
+                        <p><i class="fas fa-check-circle" style="color: var(--secondary); margin-right: 8px;"></i>Dibuat dari kedelai pilihan terbaik</p>
+                        <p><i class="fas fa-check-circle" style="color: var(--secondary); margin-right: 8px;"></i>Rasanya enak, ramah di kantong</p>
+                    </div>
+                    
+                    <a href="#order" class="order-btn">Pesan Sekarang <i class="fas fa-shopping-cart"></i></a>
+                </div>
+                
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Susu Kedelai Pak Hadi">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section class="order-section" id="order">
+        <div class="container">
+            <div class="section-title animate-fade-in-up">
+                <h2>Pesan Susu Kedelai Pak Hadi</h2>
+                <p>Isi form di bawah ini untuk memesan susu kedelai segar langsung ke WhatsApp kami. Pesanan Anda akan diproses segera.</p>
+            </div>
+            
+            <div class="order-container">
+                <div class="order-form animate-fade-in-up">
+                    <h3>Form Pemesanan</h3>
+                    <form id="orderForm">
+                        <div class="form-group">
+                            <label for="name">Nama Lengkap</label>
+                            <input type="text" id="name" placeholder="Masukkan nama Anda" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Nomor WhatsApp</label>
+                            <input type="tel" id="phone" placeholder="Contoh: 081234567890" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">Alamat Lengkap</label>
+                            <textarea id="address" rows="3" placeholder="Masukkan alamat pengiriman" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Jumlah Pesanan (Botol)</label>
+                            <div class="quantity-control">
+                                <button type="button" class="quantity-btn" id="decreaseQty">-</button>
+                                <input type="text" class="quantity-input" id="quantity" value="1" readonly>
+                                <button type="button" class="quantity-btn" id="increaseQty">+</button>
+                                <div style="margin-left: 20px; font-weight: 500;">@ Rp 1.000</div>
+                            </div>
+                        </div>
+                        
+                        <div class="price-display">
+                            <h3>Total Harga: <span id="totalPrice">Rp 1.000</span></h3>
+                            <p>Harga sudah termasuk ongkos kirim dalam kota</p>
+                        </div>
+                        
+                        <button type="submit" class="order-btn" id="submitOrder">
+                            <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="order-info animate-fade-in-up">
+                    <h3>Mengapa Memesan di Sini?</h3>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div>
+                            <h4>Proses Cepat</h4>
+                            <p>Pesanan Anda akan langsung diproses setelah konfirmasi via WhatsApp.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <div>
+                            <h4>Gratis Ongkir</h4>
+                            <p>Gratis ongkos kirim untuk sekitar wilayah Gaya Baru.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div>
+                            <h4>100% Alami</h4>
+                            <p>Dibuat dari kedelai pilihan tanpa bahan pengawet atau perasa buatan.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <div>
+                            <h4>Pengalaman Sejak 2006</h4>
+                            <p>Lebih dari 19 tahun melayani pelanggan dengan cita rasa yang konsisten.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-title animate-fade-in-up">
+                <h2>Tentang Susu Kedelai Pak Hadi</h2>
+                <p>Menjadi pilihan utama keluarga Indonesia untuk asupan nutrisi sehat sehari-hari</p>
+            </div>
+            
+            <div class="about-content animate-fade-in-up">
+                <div class="about-text">
+                    <h3>Kualitas Terbaik Sejak 2006</h3>
+                    <p>Susu Kedelai Pak Hadi sudah hadir dengan cita rasa khas sejak tahun 2006. Dengan rasa yang masih otentik dan bahan-bahan pilihan, kami hadir untuk memberikan asupan nutrisi terbaik untuk keluarga Anda.</p>
+                    
+                    <p>Kami mempertahankan kualitas dan cita rasa khas yang membuat pelanggan setia selalu kembali. Setiap botol susu kedelai kami dibuat dengan proses higienis dan pengawasan ketat untuk menjaga kualitas terbaik.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-award"></i>
+                            <h4>Kualitas Terjamin</h4>
+                            <p>Proses produksi higienis dengan standar kualitas terbaik.</p>
+                        </div>
+                        
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <h4>Sehat & Alami</h4>
+                            <p>100% bahan alami tanpa bahan kimia berbahaya.</p>
+                        </div>
+                        
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <h4>Ramah Keluarga</h4>
+                            <p>Cocok untuk semua usia, dari anak-anak hingga lansia.</p>
+                        </div>
+                        
+                        <div class="feature">
+                            <i class="fas fa-smile"></i>
+                            <h4>Rasa Disukai</h4>
+                            <p>Cita rasa khas yang sudah disukai sejak tahun 2006.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1626645738675-3c4d7bc6f2a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Proses Pembuatan Susu Kedelai">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+<section class="location-section" id="location">
+    <div class="container">
+        <div class="section-title animate-fade-in-up">
+            <h2>Lokasi Kami</h2>
+            <p>Kunjungi rumah kami untuk mendapatkan susu kedelai segar langsung</p>
+        </div>
+        
+        <div class="location-content animate-fade-in-up">
+            <div class="location-info">
+                <h3><i class="fas fa-map-marker-alt" style="color: var(--accent); margin-right: 10px;"></i> Susu Kedelai Pak Hadi</h3>
+                <div class="address-details">
+                    <p><strong>Alamat:</strong></p>
+                    <p>GayaBaru 3, pojok Balai Desa GayaBaru 3,Gg. Ayam Potong, Rumah yang dirawa <br>
+                    Seputih Surabaya, Lampung Tengah</p>
+                    
+                    <div class="contact-info">
+                        <p><strong><i class="fas fa-clock"></i> Jam Buka:</strong></p>
+                        <p>Senin - Minggu: 07.00 - 22.00 WIB</p>
+                        <p>Kadang kami tutup, tetapi tidak pasti</p>
+                        
+                        <p><strong><i class="fas fa-phone"></i> Telepon:</strong> 0819-3045-7415</p>
+                        <p><strong><i class="fab fa-whatsapp"></i> WhatsApp:</strong> 0819-3045-7415</p>
+                    </div>
+                    
+                    <div class="location-buttons">
+                        <a href="https://maps.app.goo.gl/R8fLSE2TRChgpf3U7" target="_blank" class="location-btn">
+                            <i class="fas fa-map"></i> Buka di Google Maps
+                        </a>
+                        <a href="https://wa.me/6281930457415" target="_blank" class="location-btn whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> Hubungi via WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="location-map">
+                <!-- Ganti link src dengan Google Maps embed URL Anda -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1451.7570648485166!2d105.6608801242731!3d-4.680631236189456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e3f71bdc6f167e7%3A0x515afc1593e4e051!2sSusu%20Kedelai%20PAK%20HADI!5e0!3m2!1sid!2sid!4v1766447340079!5m2!1sid!2sid" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0; border-radius: var(--radius);" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <p class="map-note"><i class="fas fa-info-circle"></i> Klik peta di atas untuk panduan ke lokasi kami</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Susu Kedelai Pak Hadi</h3>
+                    <p>Menjadi pilihan utama keluarga Indonesia untuk asupan nutrisi sehat sehari-hari sejak tahun 2006.</p>
+                    <div style="margin-top: 15px;">
+                        <i class="fas fa-phone" style="margin-right: 10px;"></i> 0819-3045-7415<br>
+                        <i class="fas fa-envelope" style="margin-right: 10px;"></i> info@susukedelaihadi.com
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Menu</h3>
+                    <ul>
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#about">Tentang Kami</a></li>
+                        <li><a href="#order">Pesan Online</a></li>
+                        <li><a href="#location">Lokasi Toko</a></li>
+                        <li><a href="#contact">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Layanan</h3>
+                    <ul>
+                        <li><a href="#">Pemesanan via WhatsApp</a></li>
+                        <li><a href="#">Pengiriman Cepat</a></li>
+                        <li><a href="#">Gratis Ongkir di Sekitar GayaBaru</a></li>
+                        <li><a href="#">Bisa COD</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Ikuti Kami</h3>
+                    <div style="display: flex; gap: 15px; margin-top: 10px; font-size: 20px;">
+                        <a href="#" style="color: #ddd;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="color: #ddd;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: #ddd;"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" style="color: #ddd;"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>Copyright &copy; 2025 Susu Kedelai Pak Hadi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('navMenu').classList.toggle('active');
+            this.querySelector('i').classList.toggle('fa-bars');
+            this.querySelector('i').classList.toggle('fa-times');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#navMenu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('navMenu').classList.remove('active');
+                document.getElementById('mobileMenuBtn').querySelector('i').classList.add('fa-bars');
+                document.getElementById('mobileMenuBtn').querySelector('i').classList.remove('fa-times');
+            });
+        });
+        
+        // Quantity Control
+        const quantityInput = document.getElementById('quantity');
+        const decreaseBtn = document.getElementById('decreaseQty');
+        const increaseBtn = document.getElementById('increaseQty');
+        const totalPriceElement = document.getElementById('totalPrice');
+        
+        const pricePerBottle = 1000;
+        
+        function updateTotalPrice() {
+            const quantity = parseInt(quantityInput.value);
+            const totalPrice = quantity * pricePerBottle;
+            totalPriceElement.textContent = `Rp ${totalPrice.toLocaleString('id-ID')}`;
+        }
+        
+        decreaseBtn.addEventListener('click', function() {
+            let quantity = parseInt(quantityInput.value);
+            if (quantity > 1) {
+                quantity--;
+                quantityInput.value = quantity;
+                updateTotalPrice();
+            }
+        });
+        
+        increaseBtn.addEventListener('click', function() {
+            let quantity = parseInt(quantityInput.value);
+            quantity++;
+            quantityInput.value = quantity;
+            updateTotalPrice();
+        });
+        
+        // WhatsApp Order Function
+document.getElementById('orderForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const address = document.getElementById('address').value.trim();
+    const quantity = document.getElementById('quantity').value;
+    const totalPrice = parseInt(quantity) * pricePerBottle;
+    
+    // Validasi form
+    if (!name || !phone || !address) {
+        alert('Harap isi semua data terlebih dahulu!');
+        return;
+    }
+    
+    // GANTI NOMOR INI DENGAN NOMOR WHATSAPP ANDA YANG SEBENARNYA
+    const yourWhatsappNumber = "6281930457415"; // <<< GANTI INI!
+    
+    // Format nomor pelanggan untuk ditampilkan di pesan
+    let customerPhone = phone;
+    // Hapus karakter non-angka
+    customerPhone = customerPhone.replace(/\D/g, '');
+    // Jika mulai dengan 0, ganti dengan 62
+    if (customerPhone.startsWith('0')) {
+        customerPhone = '62' + customerPhone.substring(1);
+    }
+    
+    // Create WhatsApp message
+    const message = `Halo Pak Hadi, saya ingin memesan Susu Kedelai:%0A%0A` +
+                   `*DATA PELANGGAN*%0A` +
+                   `📛 Nama: ${name}%0A` +
+                   `📱 No. HP: ${customerPhone}%0A` +
+                   `🏠 Alamat: ${address}%0A%0A` +
+                   `*DETAIL PESANAN*%0A` +
+                   `📦 Jumlah: ${quantity} botol%0A` +
+                   `💰 Harga per botol: Rp ${pricePerBottle.toLocaleString('id-ID')}%0A` +
+                   `💵 Total harga: *Rp ${totalPrice.toLocaleString('id-ID')}*%0A%0A` +
+                   `Silakan konfirmasi ketersediaan dan waktu pengiriman. Terima kasih.`;
+    
+    // Debug: Tampilkan URL di console (opsional)
+    console.log('WhatsApp URL:', `https://wa.me/${yourWhatsappNumber}?text=${message}`);
+    
+    // Open WhatsApp ke nomor ANDA
+    window.open(`https://wa.me/${yourWhatsappNumber}?text=${message}`, '_blank');
+    
+    // Reset form setelah order (opsional)
+    // document.getElementById('orderForm').reset();
+    // document.getElementById('quantity').value = 1;
+    // updateTotalPrice();
+});
+
+// Tambahkan juga fungsi untuk validasi input nomor
+document.getElementById('phone').addEventListener('input', function(e) {
+    // Hapus karakter non-angka
+    this.value = this.value.replace(/\D/g, '');
+});
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements for animation
+        document.querySelectorAll('.animate-fade-in-up').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
